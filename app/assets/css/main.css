@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+@plugin '@tailwindcss/typography';
+
+@theme static {
+  --font-sans: 'Noto Sans', sans-serif;
+
+  --color-worket-red: #E41727;
+  --color-worket-black: #272223;
+}
