@@ -1,10 +1,16 @@
 <script setup lang="ts">
 const route = useRoute()
 
+if (!LOCALES.includes(route.params.locale as Locale)) {
+    throw createError({
+        statusCode: 404,
+        statusMessage: 'Page not found',
+    })
+}
+
 const { data: page } = await useAsyncData(
-    route.params.slug as string, 
-    // /en should be ${locale} with i18n
-    async () => queryCollection('content').path(`/en/${route.params.slug}`).first()
+    `${route.params.locale}-${route.params.slug}`,
+    () => queryCollection('content').path(`/${route.params.locale}/${route.params.slug}`).first()
 )
 
 if (!page.value) {
