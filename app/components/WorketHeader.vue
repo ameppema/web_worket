@@ -35,18 +35,19 @@ const navLinks = computed(() => [
             </nav>
 
             <div class="flex items-center gap-2">
-                <UButtonGroup>
-                    <UButton
-                        v-for="code in locales"
-                        :key="code"
-                        size="sm"
-                        :variant="code === locale ? 'solid' : 'ghost'"
-                        :color="code === locale ? 'primary' : 'neutral'"
-                        @click="setLocale(code)"
-                    >
-                        {{ LOCALE_LABELS[code] }}
-                    </UButton>
-                </UButtonGroup>
+                <div class="flex items-center text-sm font-semibold md:mr-3">
+                    <template v-for="(code, i) in locales" :key="code">
+                        <button
+                            type="button"
+                            class="cursor-pointer transition-colors"
+                            :class="code === locale ? 'text-worket-red' : 'text-worket-black/40 hover:text-worket-black'"
+                            @click="setLocale(code)"
+                        >
+                            {{ LOCALE_LABELS[code] }}
+                        </button>
+                        <span v-if="i < locales.length - 1" class="mx-1.5 text-worket-black/20">/</span>
+                    </template>
+                </div>
 
                 <span class="hidden md:inline-flex">
                     <AppStoreButton :label="t.nav.download" size="md" />
