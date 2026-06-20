@@ -10,13 +10,12 @@ withDefaults(defineProps<{
   tone: 'dark',
 })
 
-// TODO: replace with the real App Store listing URL once published.
-const APP_STORE_URL = 'https://apps.apple.com/app/worket'
+const { url: appStoreUrl } = useAppStore()
 </script>
 
 <template>
   <a
-    :href="APP_STORE_URL"
+    :href="appStoreUrl"
     target="_blank"
     rel="noopener"
     class="inline-flex items-center gap-3 rounded-full font-medium transition-transform hover:scale-[1.03]"

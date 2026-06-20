@@ -16,15 +16,7 @@ const t = useT()
           </h2>
           <p class="mx-auto mt-4 max-w-xl text-lg text-white/90">{{ t.cta.subtitle }}</p>
           <div class="mt-8 flex justify-center">
-            <a
-              href="https://apps.apple.com/app/worket"
-              target="_blank"
-              rel="noopener"
-              class="inline-flex items-center gap-3 rounded-full bg-white px-7 py-4 text-lg font-medium text-worket-black transition-transform hover:scale-[1.03]"
-            >
-              <UIcon name="simple-icons:apple" class="size-7" />
-              <span>{{ t.cta.button }}</span>
-            </a>
+            <AppStoreButton :label="t.cta.button" tone="light" />
           </div>
         </div>
       </div>
