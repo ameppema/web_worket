@@ -2,14 +2,9 @@ export default defineAppConfig({
   // https://ui.nuxt.com/getting-started/theme#design-system
   ui: {
     colors: {
-      primary: 'emerald',
+      // Drive Nuxt UI from the Worket red palette defined in main.css
+      primary: 'worket',
       neutral: 'neutral',
     },
-    button: {
-      defaultVariants: {
-        // Set default button color to neutral
-        // color: 'neutral'
-      }
-    }
-  }
+  },
 })

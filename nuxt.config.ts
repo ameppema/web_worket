@@ -8,6 +8,14 @@ export default defineNuxtConfig({
     colorMode: false,
   },
 
+  // Resolve Tailwind `--font-*` theme variables so @nuxt/fonts fetches
+  // 'Space Grotesk' and 'Funnel Display' from Google Fonts and self-hosts them.
+  fonts: {
+    experimental: {
+      processCSSVariables: true,
+    },
+  },
+
   content: {
     renderer: {
       anchorLinks: false,

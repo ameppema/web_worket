@@ -4,8 +4,36 @@
 @plugin '@tailwindcss/typography';
 
 @theme static {
-  --font-sans: 'Noto Sans', sans-serif;
+  /* Worket typefaces — auto-fetched by @nuxt/fonts */
+  --font-sans: 'Space Grotesk', sans-serif;
+  --font-display: 'Funnel Display', sans-serif;
 
+  /* Brand surfaces */
   --color-worket-red: #E41727;
   --color-worket-black: #272223;
+  --color-worket-cream: #FFF8F0;
+
+  /* Worket red palette (anchored on the brand #E41727 at 600) so it can
+     drive Nuxt UI's `primary` color across buttons, links, focus rings… */
+  --color-worket-50: #fef2f2;
+  --color-worket-100: #fde3e4;
+  --color-worket-200: #fbccce;
+  --color-worket-300: #f7a8ab;
+  --color-worket-400: #f1767b;
+  --color-worket-500: #e94a50;
+  --color-worket-600: #e41727;
+  --color-worket-700: #bf1320;
+  --color-worket-800: #9e151f;
+  --color-worket-900: #83181f;
+  --color-worket-950: #47080c;
+}
+
+/* Warm cream page background, matching the app */
+body {
+  background-color: var(--color-worket-cream);
+}
+
+/* Display font for headings */
+.font-display {
+  font-family: var(--font-display);
 }

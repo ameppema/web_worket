@@ -22,9 +22,9 @@ onMounted(() => {
 
 <template>
   <UApp>
-    <div class="bg-default min-h-[100svh] flex flex-col">
+    <div class="bg-worket-cream min-h-[100svh] flex flex-col overflow-x-clip">
       <WorketHeader />
-      <main class="grow flex">
+      <main class="grow flex flex-col">
         <NuxtPage />
       </main>
       <WorketFooter />
