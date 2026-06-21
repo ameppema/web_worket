@@ -54,7 +54,7 @@ const popularIndex = 1
           </ul>
 
           <div class="mt-8 grow" />
-          <AppStoreButton :label="t.pricing.cta" size="md" class="w-full justify-center" />
+          <AppStoreButton :label="t.pricing.cta" size="md" :tone="i === popularIndex ? 'light' : 'dark'" class="w-full justify-center" />
         </div>
       </div>
     </UContainer>
